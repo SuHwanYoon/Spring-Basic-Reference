@@ -1,0 +1,14 @@
+127.0.0.1 - - [17/Feb/2022:12:21:46 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:21:46 +0900] "GET /springProject/index.jsp HTTP/1.1" 200 234
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:21:46 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:21:49 +0900] "GET /springProject/home/home.html;jsessionid=9CFBB9F97B4E4AD9D0F601BCEB4C1DD1 HTTP/1.1" 200 3221
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:21:49 +0900] "GET /springProject/imgs/exchange.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:21:53 +0900] "GET /springProject/write/writeForm.html HTTP/1.1" 200 4069
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:21:55 +0900] "GET /springProject/write/imageForm.html HTTP/1.1" 200 4069
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:22:02 +0900] "POST /springProject/login/home.html HTTP/1.1" 200 3100
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:22:07 +0900] "GET /springProject/write/imageForm.html HTTP/1.1" 200 4734
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:33:41 +0900] "POST /springProject/write/upload.html HTTP/1.1" 500 9352
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:38:18 +0900] "GET /springProject/write/imageForm.html HTTP/1.1" 200 4073
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:38:24 +0900] "POST /springProject/login/home.html HTTP/1.1" 200 3104
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:38:30 +0900] "GET /springProject/write/imageForm.html HTTP/1.1" 200 4738
+0:0:0:0:0:0:0:1 - - [17/Feb/2022:12:39:42 +0900] "POST /springProject/write/upload.html HTTP/1.1" 200 -

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;springProject/src/main/webapp/imgs/중고거래.jpg&apos; to &apos;exchange.jpg&apos;" description="Rename resource &apos;중고거래.jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/imgs/중고거래.jpg" name="exchange.jpg" stamp="1644540180913" updateReferences="true"/>
+</session>

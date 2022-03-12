@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.home">
+	<update id="updateOrderNo" parameterType="model.ImageBBS">
+	update my_imagebbs set order_no = order_no + 1
+	where group_id = #{group_id} and order_no >= #{order_no}
+	</update>
+	
+	<update id="updateImage" parameterType="model.ImageBBS">
+	update my_imagebbs set title=#{title}, email=#{email}, content=#{content},
+	image_name=#{image_name} where writing_id = #{writing_id}
+	</update>
+	<delete id="deleteImage" parameterType="Integer">
+	delete from my_imagebbs where writing_id=#{id}
+	</delete>
+	<select id="getImageById" parameterType="Integer"
+			resultType="model.ImageBBS">
+	select * from my_imagebbs where writing_id=#{id}
+	</select>
+	
+	<select id="getImageCount" resultType="Integer">
+	select count(*) from my_imagebbs
+	</select>
+	<select id="getImages" resultType="model.ImageBBS" 
+				parameterType="model.Condition">
+	select writing_id,group_id,order_no,parent_id,register_date,
+		writer_name,email,image_name,password,title,content from
+	(select img.*, rownum rn from
+		(select * from my_imagebbs 
+			order by group_id desc, order_no asc) img
+	)
+	where rn between #{startRow} and #{endRow}
+	</select>
+	
+	<select id="maxId" resultType="Integer">
+	select max(writing_id) from my_imagebbs	
+	</select>
+	<insert id="putImageBBS" parameterType="model.ImageBBS">
+	insert into my_imagebbs values(#{writing_id},
+	#{group_id},#{order_no},#{parent_id},#{register_date},
+	#{writer_name},#{email},#{image_name},#{password},
+	#{title},#{content})
+	</insert>
+	<select id="getBBS" parameterType="Integer" 
+						resultType="model.Bbs">
+		select * from my_bbs where seqno=#{seqno}
+	</select>
+	
+	<select id="getBBSCount" resultType="Integer">
+		select count(*) from my_bbs
+	</select>
+	
+	<select id="getAllBBS" resultType="model.Bbs"
+			parameterType="Integer">
+	select seqno,title,id,register_date from
+		(select rownum rn, seqno,title,id,register_date from	
+			(select seqno,title,id,register_date from my_bbs
+			order by seqno desc))
+	where rn > (#{no}-1)*5 and rn <![CDATA[<]]> ((#{no}-1)*5 + 6)
+	</select>
+	
+	<select id="maxBBS" resultType="Integer">
+		select max(seqno) from my_bbs
+	</select>
+	
+	<insert id="putBBS" parameterType="model.Bbs">
+		insert into my_bbs values(#{seqno},#{title},#{id},
+				#{content},#{register_date})
+	</insert>
+	
+	<select id="getIdCount" parameterType="String" resultType="Integer">
+		select count(*) from my_customers where id=#{id}
+	</select>
+	
+	<insert id="putUser" parameterType="model.User">
+		insert into my_customers values(#{id},#{pwd}
+		,#{name},#{addr},#{phone},#{gender},#{email},#{job})
+	</insert>
+	
+	<select id="getUser" parameterType="model.Loginuser" resultType="model.User">
+		select * from my_customers where id=#{id} and pwd=#{pwd}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+

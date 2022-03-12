@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ImageBBS.java&apos; to &apos;springProject/src/main/java/model&apos;&#x0D;&#x0A;- Original project: &apos;myHome&apos;&#x0D;&#x0A;- Destination element: &apos;springProject/src/main/java/model&apos;&#x0D;&#x0A;- Original element: &apos;model.ImageBBS.java&apos;" description="Copy compilation unit" destination="=springProject/src\/main\/java&lt;model" element1="/src\/main\/java&lt;model{ImageBBS.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1644825760492" units="1" version="1.0"/>
+</session>
